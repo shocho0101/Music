@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,72 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrB-32-Ojs">
+                                <rect key="frame" x="20" y="30" width="335" height="185.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="▶" backgroundImage="natsu.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="natsuPlayButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMC-C7-Wmz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMt-jt-7Ra">
+                                <rect key="frame" x="20" y="225.5" width="335" height="186"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="▶" backgroundImage="ame.png">
+                                    <color key="titleColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="amePlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="O66-C9-dPG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-Wy-YND">
+                                <rect key="frame" x="20" y="421.5" width="335" height="185.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="▶" backgroundImage="aki.png">
+                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="akiPlayButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPK-LO-iyN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOL-GV-K4p">
+                                <rect key="frame" x="20" y="617" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ICw-ks-fZy"/>
+                                </constraints>
+                                <state key="normal" title="停止"/>
+                                <connections>
+                                    <action selector="stop" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ndh-dy-QV3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hMt-jt-7Ra" firstAttribute="width" secondItem="rrB-32-Ojs" secondAttribute="width" id="5lv-Qm-JhQ"/>
+                            <constraint firstItem="Qhe-Wy-YND" firstAttribute="height" secondItem="rrB-32-Ojs" secondAttribute="height" id="6AK-pA-xbD"/>
+                            <constraint firstItem="Qhe-Wy-YND" firstAttribute="width" secondItem="rrB-32-Ojs" secondAttribute="width" id="7dr-mc-5fb"/>
+                            <constraint firstItem="Qhe-Wy-YND" firstAttribute="top" secondItem="hMt-jt-7Ra" secondAttribute="bottom" constant="10" id="Jat-3z-Mj9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IOL-GV-K4p" secondAttribute="bottom" constant="10" id="R04-2A-rN0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hMt-jt-7Ra" secondAttribute="trailing" constant="20" id="SHp-Q0-ZZA"/>
+                            <constraint firstItem="IOL-GV-K4p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TKl-FK-MzK"/>
+                            <constraint firstItem="Qhe-Wy-YND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VjL-uM-Ri1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qhe-Wy-YND" secondAttribute="trailing" constant="20" id="VnJ-7d-iPM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rrB-32-Ojs" secondAttribute="trailing" constant="20" id="WsJ-Pj-hvk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IOL-GV-K4p" secondAttribute="trailing" constant="20" id="X2t-Rm-sIa"/>
+                            <constraint firstItem="rrB-32-Ojs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XgH-S1-bvR"/>
+                            <constraint firstItem="hMt-jt-7Ra" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cDp-Dq-IvX"/>
+                            <constraint firstItem="IOL-GV-K4p" firstAttribute="top" secondItem="Qhe-Wy-YND" secondAttribute="bottom" constant="10" id="cYd-Zr-2N4"/>
+                            <constraint firstItem="hMt-jt-7Ra" firstAttribute="top" secondItem="rrB-32-Ojs" secondAttribute="bottom" constant="10" id="rGr-gv-lXU"/>
+                            <constraint firstItem="hMt-jt-7Ra" firstAttribute="height" secondItem="rrB-32-Ojs" secondAttribute="height" id="saT-Rn-uET"/>
+                            <constraint firstItem="rrB-32-Ojs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="saz-SL-9wj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -21,4 +86,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="aki.png" width="400" height="332"/>
+        <image name="ame.png" width="376" height="400"/>
+        <image name="natsu.png" width="400" height="285"/>
+    </resources>
 </document>
